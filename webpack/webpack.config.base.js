@@ -11,7 +11,17 @@ module.exports = {
     path: resolve("../dist"),
     filename: "js/[name].[hash].js",
   },
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: "babel-loader",
+        },
+        exclude: /node_modules/,
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
