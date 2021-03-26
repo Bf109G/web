@@ -1,5 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isProd = process.env.NODE_ENV === "production";
+console.log("isProd", isProd);
 
 function resolve(dir) {
   return path.resolve(__dirname, dir);
@@ -9,7 +12,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: resolve("../dist"),
-    filename: "js/[name].[hash].js",
+    filename: "assets/js/[name].[contenthash].js",
   },
   module: {
     rules: [
@@ -29,14 +32,26 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-        ],
+        use: !isProd
+          ? [
+              {
+                loader: "style-loader",
+              },
+              {
+                loader: "css-loader",
+              },
+            ]
+          : [
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  esModule: false,
+                },
+              },
+              {
+                loader: "css-loader",
+              },
+            ],
       },
     ],
   },
