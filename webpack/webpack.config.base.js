@@ -20,6 +20,13 @@ module.exports = {
         },
         exclude: /node_modules/,
       },
+      {
+        test: /\.html$/,
+        use: {
+          loader: "raw-loader"
+        },
+        exclude: /node_modules/,
+      }
     ],
   },
   plugins: [
