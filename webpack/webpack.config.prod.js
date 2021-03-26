@@ -8,6 +8,7 @@ module.exports = (env) => {
     plugins: [
       new MiniCssExtractPlugin({
         filename: "assets/css/[name]_[contenthash:8].css",
+        ignoreOrder: true,
       }),
     ],
   });
