@@ -31,29 +31,6 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: !isProd
-          ? [
-              {
-                loader: "style-loader",
-              },
-              {
-                loader: "css-loader",
-              },
-            ]
-          : [
-              {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  esModule: false,
-                },
-              },
-              {
-                loader: "css-loader",
-              },
-            ],
-      },
-      {
         test: /\.less$/,
         use: [
           {
@@ -69,10 +46,23 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.scss$/,
-        use: [
+        test: /\.(sa|sc|c)ss$/,
+        use: !isProd ? [
           {
             loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "sass-loader",
+          },
+        ] : [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
           },
           {
             loader: "css-loader",

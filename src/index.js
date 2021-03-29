@@ -5,8 +5,9 @@ import './index.less'
 import './index.scss'
 
 ReactDOM.render(
-    <div className="content1">Hello
-        <span className="content-sass">China!</span>
+    <div className="content">Hello
+        <span className="content-sass">China，</span>
+        <span className="content-less">China！</span>
     </div>,
     document.getElementById('root')
 )
