@@ -47,30 +47,32 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: !isProd ? [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "sass-loader",
-          },
-        ] : [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: false,
-            },
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
+        use: !isProd
+          ? [
+              {
+                loader: "style-loader",
+              },
+              {
+                loader: "css-loader",
+              },
+              {
+                loader: "sass-loader",
+              },
+            ]
+          : [
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  esModule: false,
+                },
+              },
+              {
+                loader: "css-loader",
+              },
+              {
+                loader: "sass-loader",
+              },
+            ],
         exclude: /node_modules/,
       },
     ],
