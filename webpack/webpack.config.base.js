@@ -91,7 +91,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.ejs",
+      title:'react-app'
       // minify:{
       //   removeComments: true,
       // }
