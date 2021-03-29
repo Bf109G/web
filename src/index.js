@@ -8,6 +8,7 @@ ReactDOM.render(
     <div className="content">Hello
         <span className="content-sass">China，</span>
         <span className="content-less">China！</span>
+        <img src={require('./assets/images/567.jpg')}/>
     </div>,
     document.getElementById('root')
 )
