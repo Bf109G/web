@@ -31,6 +31,18 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 1024,
+            minimize: true,
+            name: "assets/images/[name].[hash:8].[ext]",
+            esModule: false,
+          },
+        },
+      },
+      {
         test: /\.less$/,
         use: [
           {
