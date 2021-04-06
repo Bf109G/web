@@ -14,6 +14,9 @@ module.exports = {
     path: resolve("../dist"),
     filename: "assets/js/[name].[contenthash].js",
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
