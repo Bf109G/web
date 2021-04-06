@@ -1,14 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import './index.less'
-import './index.scss'
+import React from 'react';
+import ReactDOM from "react-dom";
+import "./index.css";
+import "./index.less";
+import "./index.scss";
+import AppRouter from "./router";
 
-ReactDOM.render(
-    <div className="content">Hello
-        <span className="content-sass">China，</span>
-        <span className="content-less">China！</span>
-        <img src={require('./assets/images/567.jpg')} width="80"/>
-    </div>,
-    document.getElementById('root')
-)
+ReactDOM.render(<AppRouter />, document.getElementById("root"));
