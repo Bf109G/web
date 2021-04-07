@@ -46,6 +46,17 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
+      {
         test: /\.less$/,
         use: [
           {
@@ -61,7 +72,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.(sa|sc)ss$/,
         use: !isProd
           ? [
               {
