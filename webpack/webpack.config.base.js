@@ -88,6 +88,7 @@ module.exports = {
         test: /\.(sa|sc)ss$/,
         use: !isProd
           ? [
+              { loader: "classnames-loader" },
               {
                 loader: "style-loader",
               },
