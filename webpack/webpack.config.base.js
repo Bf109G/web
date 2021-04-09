@@ -15,10 +15,22 @@ module.exports = {
     filename: "assets/js/[name].[contenthash].js",
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+          {
+            loader: "ts-loader",
+          },
+        ],
+        exclude: /node_modules/,
+      },
       {
         test: /\.(js|jsx)$/,
         use: {
@@ -106,7 +118,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
-      title:'react-app'
+      title: "react-app",
       // minify:{
       //   removeComments: true,
       // }
