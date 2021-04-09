@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "jsx": "react-jsx", //React17,TypeScript4,Babel7.9.0支持对jsx进行新的转换
+        // "lib": ["es2015","es2016","esnext","dom"],
+        "module": "commonjs",
+        "outDir": "dist",
+        "target": "es2015",
+        "types": ["node"],
+        "typeRoots": ["./src/types"]
+        // "emitDecoratorMetadata": true,
+        // "experimentalDecorators": true,
+        // "paths": {
+        //     "@/*":["./src/*"]
+        // },
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
