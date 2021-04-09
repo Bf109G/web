@@ -10,13 +10,14 @@
         "outDir": "dist",
         "target": "es2015",
         "types": ["node"],
-        "typeRoots": ["./src/types"]
+        "typeRoots": ["./src/types"],
         // "emitDecoratorMetadata": true,
         // "experimentalDecorators": true,
-        // "paths": {
-        //     "@/*":["./src/*"]
-        // },
+        "paths": {
+            "@/*":["./src/*"]
+        },
     },
+    "compileOnSave": true,
     "exclude": [
         "node_modules",
         "dist"

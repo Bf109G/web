@@ -15,6 +15,7 @@ module.exports = {
     filename: "assets/js/[name].[contenthash].js",
   },
   resolve: {
+    alias: { "@": path.resolve("./src") },
     extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
   module: {
@@ -25,9 +26,9 @@ module.exports = {
           {
             loader: "babel-loader",
           },
-          {
-            loader: "ts-loader",
-          },
+          // {
+          //   loader: "ts-loader",
+          // },
         ],
         exclude: /node_modules/,
       },
