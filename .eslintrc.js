@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    // "plugin:react/recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
   ],
   parser: "@typescript-eslint/parser",
@@ -31,6 +31,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "react/jsx-uses-react": 0,
     "react/react-in-jsx-scope": 0,
+    "react/jsx-no-undef": 0,
   },
   settings: {
     react: {
