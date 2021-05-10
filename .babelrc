@@ -3,6 +3,8 @@
         "@babel/react",{
             "runtime": "automatic"
         }
-    ]]
-    // "plugins": ["@babel/plugin-proposal-class-properties"]
+    ], "@babel/typescript"],
+    "plugins": [["@babel/proposal-decorators", {
+        "legacy": true
+    }],"@babel/proposal-class-properties"]
 }
