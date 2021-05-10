@@ -12,7 +12,7 @@
         "types": ["node"],
         "typeRoots": ["./src/types"],
         // "emitDecoratorMetadata": true,
-        // "experimentalDecorators": true,
+        "experimentalDecorators": true,
         "paths": {
             "@/*":["./src/*"]
         },
