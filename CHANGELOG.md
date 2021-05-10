@@ -25,7 +25,12 @@
 + npm i antd -S
 + npm i eslint -D
 [^_^]: (执行eslint init)
-+ npm i typescript @types/react @types/react-dom -D
++ npm i typescript @types/react @types/react-dom @types/react-router-dom-D
 [^_^]: (create tsconfig.json)
 + npm i ts-loader -D
 [^_^]: (转换ts和tsx文件，react17后可以直接用babel进行直接转换)
++ npm i classnames -S
++ npm i classnames-loader -D
++ npm i mobx mbox-react -S
++ npm @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties
+@babel/preset-typescript
